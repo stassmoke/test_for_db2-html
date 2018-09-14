@@ -1,0 +1,332 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	color: $text
+	background-color: #E5E5E5
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.text-center
+	text-align: center
+
+b, strong
+	font-weight: bold
+
+.wrap
+	margin: 150px 0
+	width: 1022px
+	height: 750px
+	background-color: #fff
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	flex-direction: row 
+	.left_fill
+		background-color: #01134E
+		width: 88px
+		height: 100%
+		padding: 18px 0
+		text-align: center
+		.logo
+			margin-bottom: 72px
+		.calendar
+			position: relative
+			.inf
+				position: absolute
+				border-radius: 50%
+				right: 16px
+				bottom: 24px
+				width: 19px
+				height: 19px
+				display: -webkit-flex
+				display: -moz-flex
+				display: -ms-flex
+				display: -o-flex
+				display: flex
+				justify-content: center
+				align-items: center
+				font-size: 11px
+				color: #fff
+				background-color: #2A74DB
+				text-align: center
+		.icons // Иконки экспортировал как картинки, изза этого они не меняют цвет при активной вкладке//	
+			margin-bottom: 30px
+			cursor: pointer
+			display: block
+			padding: 11px 0
+			&:last-child
+				margin-bottom: 0
+		.icons-n_active
+			border-left: 4px solid transparent		
+		.icons-active
+			border-left: 4px solid #0AD69C
+
+	.right_box
+		background-color: #f3f3f3
+		width: 100%
+
+		.top_box
+			width: 100%
+			height: 61px  
+			border-bottom: 1px solid #DAE4F2
+			padding: 15px 25px 15px 35px
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			flex-direction: row
+			align-items: center
+			justify-content: space-between
+			background-color: #fff
+			.crust
+				display: inline-block
+				.uli
+					font-weight: 600
+					&:after
+						content: '\f054'
+						font-family: FontAwesome
+						display: inline-block
+						font-size: 9px	
+						color: #0AD69C
+						padding: 0 10px
+					&:last-child
+						&:after
+							content: none	
+				a
+					text-decoration: none
+					font-size: 13px
+					color: #252F48
+					&:hover, &:active
+						text-decoration: none
+						color: #252F48
+			.my-profile
+				display: -webkit-flex
+				display: -moz-flex
+				display: -ms-flex
+				display: -o-flex
+				display: flex
+				flex-direction: row
+				align-items: center
+				.img-profile
+					border-radius: 50%
+					display: inline-block
+					width: 25px
+					height: 25px
+					background-image: url('../img/my-profile.png')
+					background-size: cover
+					background-position: center
+				.name-profile
+					margin: 0 10px
+					&:after
+						content: '\f078'
+						font-family: FontAwesome
+						display: inline-block
+						font-size: 10px	
+						color: #01134E
+						padding: 0 10px
+					a
+						text-decoration: none
+						font-size: 14px
+						color: #252F48
+						font-weight: 600
+						&:hover, &:active
+							text-decoration: none
+							color: #252F48
+		.main_box
+			width: 854px
+			height: 556px
+			margin: 46px
+			background-color: #fff
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			flex-direction: row
+			justify-content: space-between
+			color: #000
+			.main_left
+				width: 300px
+				.messege_item
+					width: 100%
+					height: 90.26px
+					background-color: #f3f3f3
+					display: -webkit-flex
+					display: -moz-flex
+					display: -ms-flex
+					display: -o-flex
+					display: flex
+					align-items: center
+					position: relative
+					padding: 0 7px 0 21px
+					cursor: pointer
+					.messege-box
+						display: -webkit-flex
+						display: -moz-flex
+						display: -ms-flex
+						display: -o-flex
+						display: flex
+						flex-direction: row
+						align-items: center
+					.messege-img
+						background-image: url('../img/ms_1.png')
+						background-size: cover
+						background-position: center
+						width: 50px
+						height: 50px
+						border-radius: 50%
+						margin-right: 20px
+					.messege-other
+						position: relative
+						.message-name
+							margin: 0
+							padding: 0
+							color: #01134E
+							display: inline-block
+							position: relative
+							font-size: 16px	
+						.mute
+							display: inline-block
+							position: relative
+							&:after
+								content: ''
+								display: inline-block
+								width: 8px
+								height: 8.5px
+								top: 9px
+								position: absolute
+								right: -20px
+								background-image: url('../img/mute.png')
+						.active	
+							display: inline-block
+							position: relative
+							&:before
+								content: ''
+								position: absolute
+								display: inline-block
+								right: -8px	
+								display: block
+								background-color: #0AD69C
+								width: 6px
+								height: 6px
+								border-radius: 50%	
+						p
+							white-space: nowrap
+							overflow: hidden
+							text-overflow: ellipsis
+							width: 184px
+							margin: 0
+							padding: 0
+							color: #252F48
+							font-size: 14px	
+					.messege-time
+						color: #9BA0AD
+						position: absolute
+						top: 10px
+						right: 12px
+						font-size: 12px	
+
+				.open
+					height: 91.26px
+					box-shadow: 0px 6px 20px -9px rgba(143,143,143,1)
+					// margin: 2px
+					background-color: #fff
+					z-index: 	9999
+				.unread
+					background-color: #fff		
+
+			.main_right
+				width: 100%	
+				border-left: 3px solid #f3f3f3
+				.search
+					position: relative
+					width: 100%
+					height: 50px	
+					border-bottom: 1px solid #F5F6F9
+					input, button
+						border: none
+						outline: none
+						border-radius: 3px
+					input
+						width: 100%
+						height: 42px
+						padding-left: 45px
+						&::-webkit-input-placeholder
+							color: #DADADA
+						&::-moz-placeholder
+							color: #DADADA
+						&:-moz-placeholder
+							color: #DADADA
+						&:-ms-input-placeholder
+							color: #DADADA
+					button
+						height: 26px
+						width: 26px
+						position: absolute
+						top: 8px
+						left: 8px
+						background-color: transparent
+						cursor: pointer
+						&:before
+							content: "\f002"
+							font-family: FontAwesome
+							color: #DADADA
+							font-size: 17px
+							font-weight: bold	 
+
+				.message-window
+					overflow-y: scroll
+					width: 	100%	
+					height: 456px	
+					.message-readed
+						height: 1000px	
+						width: 100%			 	
+				.message-pick
+					height: 50px	
+					width: 100%	
+					border: 1px solid black
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@import "media" // Always at the end
